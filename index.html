@@ -45,10 +45,20 @@
                 <p>羽前急行電鉄のまとめサイトへようこそ！ここでは、公式風ホームページでは見られないマニア向け情報を大量に掲載しています。公式風ホームページと合わせてご覧ください。</p>
                 
                 <div class="image-box">
-                    <p style="font-weight: bold;">3月の写真</p>
+                    <p id="month-photo-title" style="font-weight: bold;">今月の写真</p>
                     <img src="./image/UZ1000-2500_車内.png" alt="羽前急行イメージ">
                     <p class="caption">UZ-1000形(2500番台)<br>この車両は、2021年ダイヤ改正まで存在した深夜快速の専用車両でした。</p>
                 </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const monthPhotoTitle = document.getElementById('month-photo-title');
+                        if (monthPhotoTitle) {
+                            const month = new Date().getMonth() + 1;
+                            monthPhotoTitle.textContent = `${month}月の写真`;
+                        }
+                    });
+                </script>
 
                 <h2>はじめに</h2>
                 <div class="section-divider"></div>
